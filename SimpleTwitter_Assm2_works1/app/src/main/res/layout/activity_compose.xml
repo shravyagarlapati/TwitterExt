@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/black"
+        android:background="?attr/colorAccent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/toolBarComposeTitle"
+        android:id="@+id/tvToolbarTitle"
+        android:textSize="40dp"
+        android:fontFamily="cursive"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="?attr/colorControlHighlight"
+        >
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/cancel4"
+        android:id="@+id/btnCancel"
+        android:title="Cancel"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="5dp" />
+
+   <ImageButton
+       android:layout_width="wrap_content"
+       android:layout_height="wrap_content"
+       android:src="@drawable/compose"
+       android:id="@+id/btnCompose"
+       android:layout_marginLeft="140dp"
+       android:layout_marginTop="5dp"
+       android:layout_marginRight="20dp"
+        />
+    </LinearLayout>
+
+    <LinearLayout android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="?attr/colorPrimary">
+
+    <ImageView
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:id="@+id/ivProfileImage"
+        android:paddingLeft="20dp"
+        android:layout_marginRight="10dp"
+        android:src="@drawable/ic_launcher"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="User Text"
+        android:id="@+id/tvUserName"
+        android:layout_toRightOf="@+id/ivProfileImage"
+        android:paddingLeft="20dp"
+        >
+    </TextView>
+
+    </LinearLayout>
+
+
+    <EditText
+        android:layout_width="371dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/etComposeTweet"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:textColor="@color/dodgeblue"
+        android:autoLink="all"
+        android:linksClickable="true"
+        android:maxLength="145"
+        />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="0"
+        android:id="@+id/tvCharCount"
+        android:layout_gravity="left"
+        android:paddingLeft="16dp"
+        />
+
+
+</LinearLayout>

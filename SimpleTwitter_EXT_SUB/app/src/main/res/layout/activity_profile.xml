@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/black"
+        android:background="?attr/colorAccent">
+    </android.support.v7.widget.Toolbar>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="111dp"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/rlUserHeader"
+        android:layout_below="@+id/toolbar">
+
+        <ImageView
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:id="@+id/ivProfileViewImage"
+            android:paddingLeft="10dp"
+            android:layout_marginRight="10dp"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="User Text"
+            android:id="@+id/tvProfileUserName"
+            android:layout_alignParentTop="true"
+            android:layout_toRightOf="@+id/ivProfileViewImage"
+            android:layout_toEndOf="@+id/ivProfileViewImage"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tag line"
+            android:id="@+id/tvTagLine"
+            android:maxLength="150"
+            android:layout_below="@id/tvProfileUserName"
+            android:layout_alignBottom="@+id/ivProfileViewImage"
+            android:layout_toRightOf="@+id/ivProfileViewImage"
+            android:layout_toEndOf="@+id/ivProfileViewImage"
+            android:paddingLeft="10dp"
+            android:paddingRight="16dp"
+            android:autoLink="all"
+            android:linksClickable="true"
+            />
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_below="@id/rlUserHeader"
+        android:id="@+id/llCounts">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000 Followers"
+            android:id="@+id/tvFollowers"></TextView>
+
+        <TextView
+            android:layout_marginLeft="20dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="10000 Following"
+            android:id="@+id/tvFollowing"></TextView>
+    </LinearLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/llCounts"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:id="@+id/flContainer"></FrameLayout>
+</RelativeLayout>
